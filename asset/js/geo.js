@@ -19,6 +19,10 @@ const options = {
   // Initialize Autocomplete for Drop Location
   const dropInput = document.getElementById('dropoffLocation');
   const dropAutocomplete = new google.maps.places.Autocomplete(dropInput, options);
+
+  
 }
+
+
 
 initMap() 
