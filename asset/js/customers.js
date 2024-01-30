@@ -12,12 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Get form values
         const customerName = document.getElementById('customerName').value;
-        const customerEmail = document.getElementById('customerEmail').value;
+        const employeeId = document.getElementById('employeeID').value;
+        const driverLin = document.getElementById('driverLicense').value;
 
         // Add new customer to the list
-        const newCustomerItem = document.createElement('li');
+        const newCustomerItem = document.createElement('p');
+        const driverLicense = document.createElement('p');
+        const employeeID = document.createElement('p');
         newCustomerItem.className = 'customer-item';
-        newCustomerItem.textContent = `${customerName} - ${customerEmail}`;
+        driverLicense.textContent = `${driverLin}`;
+        employeeID.textContent = `${employeeId}`;
+        newCustomerItem.textContent = `${customerName}`;
+
 
         // Add delete button to remove the customer
         const deleteButton = document.createElement('button');
@@ -34,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         customerList.appendChild(newCustomerItem);
 
         // Save the new customer to local storage
-        saveCustomerToLocalStorage(customerName, { name: customerName, email: customerEmail });
+        saveCustomerToLocalStorage(customerName, { name: customerName, employeeId: employeeId, driverLin: driverLin});
 
         // Clear the form
         addCustomerForm.reset();

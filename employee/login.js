@@ -1,5 +1,4 @@
-
-const buttonLogin = document.querySelector(".btn-block");
+const buttonLogin = document.querySelector(".btn");
 
 function loginUser() {
   event.preventDefault();
@@ -7,17 +6,17 @@ function loginUser() {
   const passwordInput = document.getElementById("loginPassword").value;
 
   try {
-    const storedAdminData = localStorage.getItem("admin");
+    const storedUserData = localStorage.getItem("user");
 
-    if (storedAdminData) {
-      const storedAdmin = JSON.parse(storedAdminData);
+    if (storedUserData) {
+      const storedUser = JSON.parse(storedUserData);
 
       if (
-        emailInput === storedAdmin.email.toLowerCase() &&
-        passwordInput === storedAdmin.password
+        emailInput === storedUser.email.toLowerCase() &&
+        passwordInput === storedUser.password
       ) {
         alert("Login successful");
-        window.location.href = "/admin/dashboard.html"; // Change the URL to your desired page
+        window.location.href = "/employee/booking.html"; // Change the URL to your desired page
       } else {
         alert("Incorrect email or password");
       }
