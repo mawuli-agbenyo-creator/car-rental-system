@@ -17,6 +17,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- AdminLTE JS -->
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.0.5/dist/js/adminlte.min.js"></script>
+
+    <style>
+        /* .ride-details{
+            display: flex;
+            flex-direction: column;           
+            background-color: rgb(124, 124, 124);
+        } */
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -223,7 +231,7 @@
                                     <!-- Add Ride Form -->
                                     <form id="addRideForm">
                                         <div class="form-group">
-                                            <label for="rideName">Ride Name</label>
+                                            <label for="rideName">Driver Name</label>
                                             <input type="text" class="form-control" id="rideName" placeholder="Enter ride name" required>
                                         </div>
 
@@ -232,13 +240,35 @@
                                             <input type="text" class="form-control" id="rideImageUrl" placeholder="Enter ride image url" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="ridePrize">Ride Prize</label>
-                                            <input type="text" class="form-control" id="ridePrize" placeholder="Enter ride prize" required>
+                                            <label for="driverId">Work ID</label>
+                                            <input type="number" class="form-control" id="riderId" placeholder="Enter ride prize" required>
                                         </div>
+
                                         <div class="form-group">
+                                            <label for="carNumber">Car Number</label>
+                                            <input type="number" class="form-control" id="carNumber" placeholder="Enter ride prize" required>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label>Time</label>
+                                            <input type="datetime-local" class="form-control" id="time" name="time" />
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="pickupLocation">Pickup Location</label>
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="pickupLocation"
+                                              name="pickupLocation"
+                                              placeholder="City or Airport"
+                                            />
+                                          </div>
+                                         
+                                        <!-- <div class="form-group">
                                             <label for="rideDesc">Ride Description</label>
                                             <textarea class="form-control" id="rideDesc" placeholder="Enter ride description" required></textarea>
-                                        </div>
+                                        </div> -->
                                         <button type="submit" class="btn btn-primary">Add Ride</button>
                                     </form>
                                 </div>
@@ -276,4 +306,6 @@
 </body>
 
 <script src="/asset/js/admin-add-ride.js"></script>
+<!-- <script src="/asset/js/geo.js"></script> -->
+
 </html>
