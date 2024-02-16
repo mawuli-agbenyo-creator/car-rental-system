@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car Rental System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .jumbotron {
+            background-image: url('https://images.cars.com/in/v2/stock_photos/77aeca88-d0af-4824-bbfd-d84ce2538524/1af0ca3f-5236-47a5-a487-32b49ec94f27.png?w=1000'); /* Replace with your image URL */
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 150px 0;
+            margin-bottom: 0;
+        }
+
+        .search-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: -100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-search {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1 class="display-4">Rent a Car with Ease</h1>
+    <p class="lead">Explore our wide range of cars for your next journey</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 search-container">
+            <h2>Find Your Perfect Car</h2>
+            <form action="listing.html" method="get">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="pickupLocation">Pickup Location</label>
+                        <input type="text" class="form-control" id="pickupLocation" name="pickupLocation" placeholder="City or Airport">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dropoffLocation">Drop-off Location</label>
+                        <input type="text" class="form-control" id="dropoffLocation"  name="dropoffLocation" placeholder="City or Airport">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="pickupDate">Pickup Date</label>
+                        <input type="date" class="form-control" name="pickupDate" id="pickupDate">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dropoffDate">Drop-off Date</label>
+                        <input type="date" class="form-control" name="dropoffDate" id="dropoffDate">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-search">Search for Cars</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBQHU3yPgn7SssnNkaot7rMhZMjYswqU8&libraries=places"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./asset/js/geo.js"></script>
+
+</body>
+</html>
