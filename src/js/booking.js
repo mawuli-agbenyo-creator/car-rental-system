@@ -50,6 +50,7 @@ function displayRides() {
             alert("Booked successfully")
         });
         btn.textContent = "Book Now";
+        btn.style.color = "white"
 
 
         // Append elements to the rideContainer

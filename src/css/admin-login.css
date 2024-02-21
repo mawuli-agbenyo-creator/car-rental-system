@@ -1,0 +1,78 @@
+body {
+    background-image: url("../images/signin-bg.svg");
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 10rem;
+  }
+
+  .card {
+    border: none;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-body {
+    padding: 20px;
+    margin-top: 3rem;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  .account{
+        margin-top: 10px;
+    }
+    .account a{
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .login{
+      width: 500px;
+      margin-left: 2rem;
+      height: 200px;
+    }
+
+
+  .content-side p{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+
+  .content-side ul li{
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+    list-style-type: none;
+  }
+
+  .content-side ul li svg{
+    margin-right: 20px;
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 750) {
+    body{
+        color: #0056b3;
+    }
+    .content-side{
+        display: none;
+    }
+  }
